@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://vk4bjnqe2ma1"]
+
+[ext_resource type="PackedScene" uid="uid://cy1yu0ajkbhu8" path="res://objects/Player.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://cu4gm5coow8wc" path="res://objects/test_env.tscn" id="2_tlwt5"]
+
+[node name="World" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00790997, 0.012, 0)
+rotation_order = 0
+motion_mode = 1
+slide_on_ceiling = false
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0.17283, 1.40555, 1.23134)
+keep_aspect = 0
+fov = 54.7
+near = 0.001
+
+[node name="TestEnv" parent="." instance=ExtResource("2_tlwt5")]
